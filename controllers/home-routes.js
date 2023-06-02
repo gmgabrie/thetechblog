@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Posts = require("../models");
+// const { Posts } = require("../models");
 
 // GET all posts for homepage
 router.get("/", async (req, res) => {
@@ -15,10 +15,10 @@ router.get("/", async (req, res) => {
 
     // const posts = dbPostData.map((posts) => posts.get({ plain: true }));
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    // res.render("homepage", {
-    //   posts,
-    //   loggedIn: req.session.loggedIn,
-    // });
+    res.render("homepage", {
+      // posts,
+      loggedIn: req.session.loggedIn,
+    });
     res.render("homepage");
   } catch (err) {
     console.log(err);
