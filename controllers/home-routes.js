@@ -1,22 +1,22 @@
 const router = require("express").Router();
-// const { Posts } = require("../models");
+const { Posts, User } = require("../models");
 
 // GET all posts for homepage
 router.get("/", async (req, res) => {
   try {
-    // const dbPostData = await Posts.findAll({
-    //   include: [
-    //     {
-    //       model: Posts,
-    //       attributes: ["title", "content"],
-    //     },
-    //   ],
-    // });
+    const dbPostData = await Posts.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
 
-    // const posts = dbPostData.map((posts) => posts.get({ plain: true }));
+    const posts = dbPostData.map((posts) => posts.get({ plain: true }));
     // Send over the 'loggedIn' session variable to the 'homepage' template
     res.render("homepage", {
-      // posts,
+      posts,
       loggedIn: req.session.loggedIn,
     });
     res.render("homepage");

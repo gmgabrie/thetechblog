@@ -71,9 +71,9 @@ nav a:hover {
   background-color: #fff;
   padding: 50px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  flex-flow: column;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .btn-no-style {
