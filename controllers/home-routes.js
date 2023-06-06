@@ -19,7 +19,6 @@ router.get("/", async (req, res) => {
       posts,
       loggedIn: req.session.loggedIn,
     });
-    res.render("homepage");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

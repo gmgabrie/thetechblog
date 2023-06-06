@@ -9,7 +9,7 @@ const postdata = [
   {
     title: "Why is MVC so important?",
     content: "It allows developers to have a true separation of concerns.",
-    user_id: 1,
+    user_id: 4,
   },
   {
     title: "Organization",
