@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{post.user.username}}!</h2>
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
@@ -13,22 +13,23 @@
     </form>
   </div>
 
-  {{!-- {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+  {{#if posts.length}}
+  <div class="col-md-6 post-list">
+    <h3>Here are your active posts:</h3>
 
-    {{#each projects as |project|}}
+    {{#each posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4><a href="/post/{{id}}">{{title}}</a></h4>
+        <p>{{content}}</p>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
   </div>
-  {{/if}} --}}
+  {{/if}}
 </div>
 
-{{!-- <script src="./js/dashboard.js"></script> --}}
+<script src="./js/dashboard.js"></script>

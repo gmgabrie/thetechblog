@@ -7,7 +7,7 @@ router.post("/", withAuth, async (req, res) => {
   try {
     const newPost = await Posts.create({
       ...req.body,
-      user_id: req.session.id,
+      user_id: req.session.userId,
     });
     console.log("This is the new post", newPost);
     res.status(200).json(newPost);
@@ -43,19 +43,19 @@ router.put("/:id", withAuth, async (req, res) => {
 // delete post ('/api/post/:id')
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const commentData = await Comment.destroy({
-      where: { postId: req.params.id },
-    });
+    // const commentData = await Comment.destroy({
+    //   where: { postId: req.params.id },
+    // });
 
-    const postData = await Post.destroy({
+    const postData = await Posts.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.id,
+        user_id: req.session.userId,
       },
     });
     if (!postData) {
       res.status(404).json({
-        message: `No User Id ${req.session.Id} found with id = ${req.params.id}`,
+        message: `No User Id ${req.session.userId} found with id = ${req.params.userId}`,
       });
       return;
     }
