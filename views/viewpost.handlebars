@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+    <div class="card col-6 mt-2">
+        <div class="card-header">
+            <h5 class="card-title">{{post.title}}</h5>
+            <h8 class="card-subtitle">Posted by {{post.user.username}} on {{format_date post.created_at}}</h6>
+        </div>  
+        <div class="card-body">  
+            <p class="card-text">{{post.content}}</p>
+        </div>
+        <div class="card-body comment">
+                {{> postcomment post.comments}}
+        </div>
+        {{#unless loggedIn}}
+        <div class="text-end mx-1">
+            <p>Please log in to leave comments</p>
+        </div>
+        {{/unless}}
+
+    </div>
+</div> 
+
+
+
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+
+{{#if loggedIn}}
+<div class="d-flex justify-content-center mt-2">
+    <div class="card col-6">
+        <div class="card-header"></div>
+        <form class="card-body comment-form">
+            <p class="form-label">Leave Comment:</p>
+            <textarea class="form-input col-12" id="comment" name="comment-body"></textarea>    
+            <button type="submit" class="btn btn-primary">Submit Comment</button>        
+        </form>               
+    </div>
+</div>
+{{/if}}
+
+<script src="/js/comment.js"></script>
