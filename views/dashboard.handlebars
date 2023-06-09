@@ -3,10 +3,8 @@
     <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
-
 <div class="row mt-4">
   <div class="col-md-6">
-
       <div class="form-group">
         <button type="submit" class="btn btn-primary"><a href="/dashboard/newpost">Add New Post</a></button>
       </div>
@@ -16,7 +14,6 @@
   {{#if posts.length}}
   <div class="col-md-6 post-list">
     <h3>Here are your active posts:</h3>
-
     {{#each posts as |post|}}
     <div class="row mb-2 card">
       <div class="col-md-8">

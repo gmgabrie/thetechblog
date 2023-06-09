@@ -2,8 +2,9 @@
 
   <div class="flex">
     <div class="float-left">
-      <p><strong>{{user.username}}: </strong>{{comment}}
-        on
+      <p class="comment-text">{{comment}}</p>
+      <p>-
+        <strong>{{user.username}}</strong>,
         {{format_date created_at}}</p>
     </div>
   </div>

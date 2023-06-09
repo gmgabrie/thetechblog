@@ -17,7 +17,7 @@
       <!-- If the user is logged in, show a logout button -->
       {{#if loggedIn}}
         <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
+        <a id="logout">Logout</a>
       {{else}}
         <!-- Otherwise, show a link to login -->
         <a href="/login">Dashboard</a>
@@ -25,7 +25,7 @@
       {{/if}}
     </nav>
     <main>
-      <div class="gallery">
+      <div class="home-posts">
         {{{body}}}
       </div>
     </main>

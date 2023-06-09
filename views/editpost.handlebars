@@ -6,7 +6,7 @@
       <label class="form-label">Title:</label>
       <input
         type="text"
-        class="form-input col-9"
+        class="form-input col-12"
         name="post-title"
         value="{{posts.title}}"
       />
@@ -24,11 +24,9 @@
       <button id="update" type="submit" class="btn btn-primary float-end"><i
           class="bi bi-pencil"
         ></i>Update</button>
-      <button
-        id="delete"
-        class="btn btn-sm btn-danger"
-        data-id="{{post.id}}"
-      >DELETE</button>
+      <button id="delete" class="btn btn-danger float-end"><i
+          class="bi bi-pencil"
+        ></i>Delete</button>
     </div>
 
   </form>
