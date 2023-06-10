@@ -20,19 +20,24 @@ body {
 }
 
 a {
-  color: var(--dark);
+  color: #0a4d68;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:visited {
-  color: inherit;
+  color: #0a4d68;
 }
 
 header {
   padding: 40px;
-  text-align: center;
+  text-align: left;
   background: var(--primary);
+  color: var(--light);
+  font-family: Audiowide;
+}
+
+#navtext {
   color: var(--light);
 }
 
@@ -45,12 +50,15 @@ main {
 nav {
   display: flex;
   background-color: var(--secondary);
+  font-family: Electrolize;
+  font-size: 1.5rem;
 }
 
 nav a {
   color: var(--light);
   padding: 14px 20px;
   text-align: center;
+  margin-left: 30px;
 }
 
 nav a:hover {
@@ -61,7 +69,7 @@ nav a:hover {
 .home-posts {
   flex: 4;
   background-color: #dde6ed;
-  padding: 50px;
+  padding: 30px;
   display: flex;
   flex-flow: column;
 }
@@ -81,11 +89,15 @@ nav a:hover {
   margin-left: 16px;
 }
 
+h2 {
+  color: #0a4d68;
+}
+
 /* CARDS */
 .card {
   margin: 10px;
   flex: 0 1 150px;
-  border: 7px double var(--dark);
+  border: 7px ridge var(--dark);
   border-radius: 10px;
   background-color: var(--light);
   color: var(--dark);
@@ -94,7 +106,7 @@ nav a:hover {
 
 .login-card {
   margin: 0 0 20px 0;
-  flex: 0 0 50%;
+  flex: 0 0 20%;
   max-width: 100%;
   padding: 5px;
   border: 3px solid var(--dark);
@@ -127,4 +139,27 @@ nav a:hover {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
+}
+
+/* dddd */
+
+#useritalic {
+  font-style: italic;
+}
+
+.wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#drawnborder {
+  background: #efefef;
+  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
+  padding: 1%;
+  width: auto;
+  margin: 10px;
+}
+.box1 {
+  border: 2px solid #333;
 }

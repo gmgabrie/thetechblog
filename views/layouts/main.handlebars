@@ -4,24 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Tech Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Electrolize"
+    />
     <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
 
   <body>
     <header>
-      <h1>Welcome to The Tech Blog</h1>
+      <h1>The Tech Blog</h1>
     </header>
-    <nav>
-      <a href="/">Home</a>
+    <nav class="navtext">
+      <a id="navtext" href="/">Home</a>
       <!-- If the user is logged in, show a logout button -->
       {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <a id="logout">Logout</a>
+        <a id="navtext" href="/dashboard">Dashboard</a>
+        <a class="logout" id="navtext">Logout</a>
       {{else}}
         <!-- Otherwise, show a link to login -->
-        <a href="/login">Dashboard</a>
-        <a href="/login">Login</a>
+        <a id="navtext" href="/login">Dashboard</a>
+        <a id="navtext" href="/login">Login</a>
       {{/if}}
     </nav>
     <main>

@@ -1,5 +1,5 @@
 {{#each posts as |post|}}
-  <div class="card" id="post">
+  {{!-- <div class="card" id="post">
     <h2><a href="/post/{{id}}">{{post.title}}</a>
     </h2>
     <p>
@@ -8,5 +8,16 @@
         {{post.user.username}}</b>
       on
       {{format_date post.createdAt}}</p>
+  </div> --}}
+  <div id="drawnborder" class="wrapper box1">
+    <h2><a href="/post/{{id}}">{{post.title}}</a>
+    </h2>
+    <p>
+      {{post.content}}</p>
+    <p id="useritalic">posted by<b>
+        {{post.user.username}}</b>
+      on
+      {{format_date post.createdAt}}</p>
   </div>
+
 {{/each}}
